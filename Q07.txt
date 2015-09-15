@@ -1,4 +1,4 @@
-SELECT e.FirstName,e.LastName,e.LastName,i.InvoiceId,i.InvoiceDate
+SELECT e.FirstName,e.LastName,i.InvoiceId,i.InvoiceDate
 FROM Invoice i 
 LEFT JOIN Customer cust ON i.CustomerId == cust.CustomerId
 JOIN Employee e

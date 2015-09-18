@@ -1,0 +1,7 @@
+SELECT il.InvoiceLineId,il.InvoiceId,il.TrackId,t.Name TrackName,art.Name ArtistName,il.UnitPrice,il.Quantity FROM InvoiceLine il
+LEFT JOIN Track t
+ON il.TrackId = t.TrackId
+JOIN Album al
+ON t.AlbumId = al.AlbumId
+JOIN Artist art
+ON al.ArtistId = art.ArtistId

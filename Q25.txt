@@ -1,0 +1,6 @@
+SELECT t.TrackId,t.Name,i.InvoiceDate,COUNT(il.TrackId) NumbPurchased FROM Track t
+LEFT JOIN InvoiceLine il ON t.TrackId = il.TrackId
+JOIN Invoice i ON i.InvoiceId = i.InvoiceId
+GROUP BY t.TrackId
+ORDER BY NumbPurchased DESC
+LIMIT 5

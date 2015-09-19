@@ -1,0 +1,4 @@
+SELECT e.LastName,e.FirstName,COUNT(c.CustomerId) CustomersAssigned FROM Employee e
+LEFT JOIN Customer c ON e.EmployeeId = c.SupportRepId
+WHERE Title = 'Sales Support Agent'
+GROUP BY e.EmployeeId

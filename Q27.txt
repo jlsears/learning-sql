@@ -1,0 +1,6 @@
+SELECT m.Name, SUM(il.Quantity) NumbSold FROM MediaType m
+LEFT JOIN Track t ON m.MediaTypeId = t.MediaTypeId
+JOIN InvoiceLine il ON t.TrackId = il.TrackId
+GROUP BY m.Name
+ORDER BY NumbSold DESC
+LIMIT 1

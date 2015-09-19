@@ -1,0 +1,3 @@
+SELECT BillingCountry,SUM(Total) TotalSales FROM Invoice GROUP BY BillingCountry
+ORDER BY TotalSales DESC
+LIMIT 1

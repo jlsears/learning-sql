@@ -1,0 +1,7 @@
+SELECT ar.Name, SUM(il.Quantity) NumbSold FROM Artist ar
+LEFT JOIN Album al ON ar.ArtistId = al.ArtistId
+JOIN Track t ON al.AlbumId = t.AlbumId
+JOIN InvoiceLine il ON t.TrackId = il.TrackId 
+GROUP BY ar.Name
+ORDER BY NumbSold DESC
+LIMIT 3
